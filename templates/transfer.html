@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Funds 💸</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transfer Funds 💸</h1>
+        <form method="POST" class="transfer-form">
+            <label for="recipient">Recipient Username:</label>
+            <br>
+            <input type="text" id="recipient" name="recipient" required placeholder="Enter recipient's username">
+            <br>
+            <br>
+            <label for="amount">Amount:</label>
+            <br>
+            <input type="number" id="amount" name="amount" step="0.01" required placeholder="Enter amount">
+            <br>
+            <p>
+            <button type="submit" class="btn">Transfer 💰</button>
+        </form>
+        <br>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+        </div></p>
+    </div>
+</body>
+</html>

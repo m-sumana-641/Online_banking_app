@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Loan 💰</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Apply for Loan 💰</h1>
+        <form method="POST" class="loan-form">
+            <label for="loan_amount">Loan Amount:</label>
+            <input type="number" id="loan_amount" name="loan_amount" step="0.01" required placeholder="Enter loan amount">
+            <br><br>
+            <button type="submit" class="btn">Submit Application 📄</button>
+        </form>
+        <br>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+    </div>
+</body>
+</html>

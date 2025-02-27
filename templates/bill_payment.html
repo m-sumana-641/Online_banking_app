@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bills 🧾</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pay Bills 🧾</h1>
+        <form method="POST" class="bill-form">
+            <label for="bill_type">Bill Type:</label>
+            <select id="bill_type" name="bill_type" required>
+                <option value="electricity">Electricity ⚡</option>
+                <option value="water">Water 💧</option>
+                <option value="internet">Internet 🌐</option>
+                <br>
+            </select>
+            <br>
+            <label for="amount">Amount:</label>
+            <br>
+            <input type="number" id="amount" name="amount" step="0.01" required placeholder="Enter amount">
+            <br>
+            <p>
+            <button type="submit" class="btn">Pay 💳</button>
+        </form>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+            </p>
+    </div>
+</body>
+</html>

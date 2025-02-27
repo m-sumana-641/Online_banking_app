@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management 💼</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Account Management 💼</h1>
+        <p>Welcome, {{ username }}!</p>
+        <div class="account-details">
+            <p><strong>Account Number:</strong> {{ account_details.account_number }}</p>
+            <p><strong>Account Type:</strong> {{ account_details.account_type }}</p>
+            <p><strong>Balance:</strong> ${{ account_details.balance }}</p>
+        </div>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.istockphoto.com/id/1249978415/photo/modern-office-desks-with-plants.webp?a=1&b=1&s=612x612&w=0&k=20&c=9rZxD3FXlZUrlPFDfPdTy6wGK805xb6As5Py2DdXSyE=') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 350px;
+    z-index: 1;
+    justify-content: center;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Error Message Styles */
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #c62828;
+}
+
+/* Form Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+/* Button Styles */
+.btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+.transactions {
+    max-height: 400px; /* Adjust based on preference */
+    overflow-y: auto; /* Enables scrolling */
+    border: 1px solid #ccc; /* Optional: Visual separation */
+    padding: 10px;
+    background: white; /* Ensures readability */
+    border-radius: 10px;
+}
+
+/* Ensure the body is scrollable */
+body {
+    overflow-y: auto; /* Enables scrolling for the entire page */
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line */
+    justify-content: center; /* Center align buttons */
+    gap: 10px; /* Adds spacing between buttons */
+    max-width: 400px; /* Adjust based on your layout */
+    margin: auto; /* Centering the div */
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    width: 180px; /* Adjust button width */
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; // ✅ Centers the login button 
+} */
+/* p {
+    align-items: center;
+} */

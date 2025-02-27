@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History 📜</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Transaction History 📜</h1>
+        <p>Welcome, {{ username }}!</p>
+        <div class="transactions">
+            {% if transactions %}
+                {% for transaction in transactions %}
+                    <div class="transaction">
+                        <p><strong>Type:</strong> {{ transaction.type }}</p>
+                        <p><strong>Amount:</strong> ${{ transaction.amount }}</p>
+                        {% if transaction.type == "Transfer" %}
+                            <p><strong>Recipient:</strong> {{ transaction.recipient }}</p>
+                        {% elif transaction.type == "Bill Payment" %}
+                            <p><strong>Bill Type:</strong> {{ transaction.bill_type }}</p>
+                        {% endif %}
+                        <p><strong>Date:</strong> {{ transaction.date }}</p>
+                    </div>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <p>No transactions found.</p>
+            {% endif %}
+        </div>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History 📜</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Transaction History 📜</h1>
+        <p>Welcome, {{ username }}!</p>
+        <div class="transactions">
+            {% if transactions %}
+                {% for transaction in transactions %}
+                    <div class="transaction">
+                        <p><strong>Type:</strong> {{ transaction.type }}</p>
+                        <p><strong>Amount:</strong> ${{ transaction.amount }}</p>
+                        {% if transaction.type == "Transfer" %}
+                            <p><strong>Recipient:</strong> {{ transaction.recipient }}</p>
+                        {% elif transaction.type == "Bill Payment" %}
+                            <p><strong>Bill Type:</strong> {{ transaction.bill_type }}</p>
+                        {% endif %}
+                        <p><strong>Date:</strong> {{ transaction.date }}</p>
+                    </div>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <p>No transactions found.</p>
+            {% endif %}
+        </div>
+        <a href="/dashboard/{{ username }}" class="btn">Back to Dashboard 🏠</a>
+    </div>
+</body>
+</html>
